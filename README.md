@@ -29,3 +29,9 @@ Follow the steps:
 - git clone
 - npm i
 - ng serve
+
+## S3 bucket link:
+http://sharakouski-test-angular.s3-website-us-east-1.amazonaws.com/
+
+## Cloudfront link:
+https://d16bq4cpjzalqv.cloudfront.net/
