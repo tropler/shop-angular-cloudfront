@@ -63,8 +63,13 @@ export class ProductsService extends ApiService {
       return this.http.get<Product[]>('/assets/products.json');
     }
 
+    const token = localStorage.getItem('authorization_token')!;
     const url = this.getUrl('bff', 'products');
-    return this.http.get<Product[]>(url);
+    return this.http.get<Product[]>(url, {
+      headers: {
+        'Authorization': `Basic ${token}`,
+      }
+    });
   }
 
   getProductsForCheckout(ids: string[]): Observable<Product[]> {
